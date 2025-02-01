@@ -1,0 +1,220 @@
+/* Resetando margens e padding para garantir um layout consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Definindo a fonte e o fundo da página */
+    font-family: Arial, sans-serif;
+    background-color: #141414; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilos para o cabeçalho e barra de navegação */
+header {
+    background-color: #000; /* Cor do fundo do cabeçalho */
+    padding: 10px 0; /* Espaçamento em cima e embaixo */
+}
+
+.navbar {
+    background-color:black;
+    display: flex; /* Alinhamento flexível */
+    justify-content: space-between; /* Espaça os itens no cabeçalho */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    padding: 0 20px; /* Espaçamento à esquerda e à direita */
+}
+
+.navbar h1 {
+    color: #e50914; /* Cor vermelha para o nome do site */
+}
+
+nav ul {
+    list-style-type: none; /* Remove as marcas de lista */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin-right: 20px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff; /* Cor branca para os links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+}
+
+/* Estilos para a seção principal do conteúdo */
+.main-content {
+    padding: 20px; /* Espaçamento interno da seção */
+}
+
+/* Estilo para o banner (título e descrição chamativos) */
+.banner {
+    text-align: center; /* Centraliza o texto */
+    background-color: #333; /* Cor de fundo escura */
+    padding: 50px 20px; /* Espaçamento interno */
+    margin-bottom: 30px; /* Espaço abaixo do banner */
+}
+
+.banner h2 {
+    font-family: 'Imperial Script', serif;
+    font-size: 4em; /* Tamanho grande do título */
+    color: white;
+    text-align: center;
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.banner p {
+    font-family: 'Lora',serif;
+    font-size: 22px; /* Tamanho maior do parágrafo */
+    color:#fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container que contém os cards das declarações */
+.content-container {
+    display: flex;
+    flex-wrap: nowrap; /* não Permite que os cartões quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui os cartões uniformemente */
+    gap: 10px; /* Espaço entre os cartões */
+    padding: 10px;
+}
+
+.movie-card {
+    width: calc(16.66% - 10px); /* Cada cartão ocupa 1/3 do espaço disponível, subtraindo o espaço do gap */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto; /* Altura fixa para padronizar o tamanho das imagens */
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Faz a caixa de texto crescer conforme necessário */
+    text-align: center;
+}
+
+.movie-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.movie-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.movie-info button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.movie-info button:hover {
+    background-color: #f40612;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .movie-card {
+        width: calc(50% - 20px); /* Para telas médias, ocupa metade do espaço */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-card {
+        width: 100%; /* Para telas pequenas, ocupa toda a largura */
+    }
+}
+
+/* Contador de Tempo*/
+
+#time-together {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 30px;
+}
+
+.featured-movies-title {
+    font-size: 24px;
+    color: white;
+    margin-top: 40px; /* Adiciona espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center; /* Centraliza o título */
+}
+
+#time-together h3 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
+    margin-bottom: 10px; /* Espaçamento inferior do título */
+}
+
+#time-display {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    color: #555; /* Cor do texto */
+    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+@media (max-width: 600px) {
+    #time-together {
+        padding: 15px; /* Ajusta o espaçamento interno para telas menores */
+    }
+
+    #time-together h3 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do título para telas menores */
+    }
+
+    #time-display {
+        font-size: 16px; /* Ajusta o tamanho da fonte do texto para telas menores */
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
